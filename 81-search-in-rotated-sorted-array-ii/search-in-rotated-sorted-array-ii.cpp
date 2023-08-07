@@ -8,7 +8,7 @@ public:
                 return true;
             }
             
-            // here we are trimming down the array size 
+            // here we are trimming down the array  
             if(nums[low] == nums[mid] && nums[mid] == nums[high]){
                 low++,high--;
                 continue;
