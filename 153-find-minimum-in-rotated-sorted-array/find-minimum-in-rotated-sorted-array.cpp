@@ -5,6 +5,14 @@ public:
         int low = 0,high = nums.size() - 1;
         while(low <= high){
             int mid = (low + high)/2;
+
+            //now here the search space is already sorted
+            // then always nums[low] will be smaller
+            if(nums[low] <= nums[high]){
+                ans = min(ans,nums[low]);
+                break;
+            }
+
             // left half is sorted
             if(nums[low] <= nums[mid]){
                 // pick the element and eleminate the left half
